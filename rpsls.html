@@ -1,9 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Rock-Paper-Scissors-Lizard-Spock</title>
+	<meta charset="utf-8">
+	<title>RPSLS Game</title>
+	<link rel="stylesheet" type="text/css" href="rpsls.css">
 </head>
 <body>
+	<header>
+		<h1>Rock Paper Scissors Lizard Spock</h1>
+	</header>
+	<div class="score-board">
+		<div id="user-label" class="badge">User</div>
+		<div id="computer-label" class="badge">Comp</div>
+		<span id="user-score">0</span>:<span id="computer-score">0</span>
+	</div>
 
+	<div class="result">
+		<p>Please choose a move.</p>
+	</div>
+
+	<div class="choices" id="rck">
+		<div class="choice">
+			<img src="images/rock.png">
+		</div>
+		<div class="choice" id="ppr">
+			<img src="images/paper.png">
+		</div>
+		<div class="choice" id="ssr">
+			<img src="images/scissors.png">
+		</div>
+		<div class="choice" id="lzr">
+			<img src="images/lizard.png">
+		</div>
+		<div class="choice"	id="spk">
+			<img src="images/spock.png">
+		</div>
+	</div>
+	<p id="action-message">Make your move</p>
 </body>
 </html>
