@@ -1,5 +1,5 @@
-const userScore = 0;
-const computerScore = 0;
+let userScore = 0;
+let computerScore = 0;
 const userScore_span = document.getElementById('user-score');
 const computerScore_span = document.getElementById('computer-score');
 const scoreBoard_div = document.querySelector(".score-board");
@@ -13,7 +13,24 @@ const spock_div = document.getElementById("k");
 function getComputerChoice() {
 	const choices = ["r", "p", "s", "l", "k"];
 	const randomNumber = Math.floor(Math.random() * 5);
-	return randomNumber;
+	return choices[randomNumber];
+}
+
+function win(user, computer) {
+	userScore++;
+	userScore_span.innerHTML = userScore;
+	computerScore_span.innerHTML = computerScore;
+	result_div.innerHTML = user + " beats " + computer + ". You Win!"
+}
+
+function lose(user, computer) {
+	computerScore++;
+	userScore_span.innerHTML = userScore;
+	computerScore_span.innerHTML = computerScore;
+}
+
+function draw(user, computer) {
+	;
 }
 
 function game(userChoice) {
@@ -29,7 +46,7 @@ function game(userChoice) {
 		case "lp":
 		case "pk":
 		case "kr":
-			console.log("User Wins!");
+			win(userChoice, computerChoice);
 			break;
 		case "lr":
 		case "kl":
@@ -41,8 +58,15 @@ function game(userChoice) {
 		case "pl":
 		case "kp":
 		case "rk":
-			console.log("Computer Wins!")
-			break
+			lose(userChoice, computerChoice);
+			break;
+		case "rr":
+		case "ll":
+		case "kk":
+		case "ss":
+		case "pp":
+			draw(userChoice, computerChoice);
+			break;
 	}
 }
 
