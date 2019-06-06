@@ -3,7 +3,7 @@ let computerScore = 0;
 const userScore_span = document.getElementById('user-score');
 const computerScore_span = document.getElementById('computer-score');
 const scoreBoard_div = document.querySelector(".score-board");
-const result_div = document.querySelector(".result");
+const result_p = document.querySelector(".result > p");
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
@@ -16,21 +16,36 @@ function getComputerChoice() {
 	return choices[randomNumber];
 }
 
+function convertTwoWord(letter) {
+	if (letter === "r") return "Rock";
+	if (letter === "p") return "Paper";
+	if (letter === "s") return "Scissors";
+	if (letter === "l") return "Lizard";
+	return "Spock";
+}
+
 function win(user, computer) {
 	userScore++;
 	userScore_span.innerHTML = userScore;
 	computerScore_span.innerHTML = computerScore;
-	result_div.innerHTML = user + " beats " + computer + ". You Win!"
+	const smallUserWord = "User".fontsize(3).sup()
+	const smallCompWord = "Comp".fontsize(3).sup()
+	result_p.innerHTML = `${convertTwoWord(user)}${smallUserWord} beats ${convertTwoWord(computer)}${smallCompWord}. You Win!`;
 }
 
 function lose(user, computer) {
 	computerScore++;
 	userScore_span.innerHTML = userScore;
 	computerScore_span.innerHTML = computerScore;
+	const smallUserWord = "User".fontsize(3).sub()
+	const smallCompWord = "Comp".fontsize(3).sub()
+	result_p.innerHTML = `${convertTwoWord(user)}${smallUserWord} loses ${convertTwoWord(computer)}${smallCompWord}. You Lost!`;
 }
 
 function draw(user, computer) {
-	;
+	const smallUserWord = "User".fontsize(3).sub()
+	const smallCompWord = "Comp".fontsize(3).sub()
+	result_p.innerHTML = `${convertTwoWord(user)}${smallUserWord} equals ${convertTwoWord(computer)}${smallCompWord}. It's a Draw!`;
 }
 
 function game(userChoice) {
