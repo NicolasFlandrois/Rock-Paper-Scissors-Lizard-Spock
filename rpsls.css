@@ -93,3 +93,8 @@ header > h1 {
 	font-size: 20px;
 	margin-top: 20px;
 }
+
+#rule-diagram {
+	margin: 15px 0;
+	text-align: center;	
+}
