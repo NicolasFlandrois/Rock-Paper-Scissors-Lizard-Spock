@@ -7,16 +7,16 @@ The game is an expansion on the game Rock, Paper, Scissors. Each player picks a 
 
 Almost always, the boys will all pick Spock at the same time and tie over and over again.
 
-	*Scissors* cuts *Paper*
-	*Paper* covers *Rock*
-	*Rock* crushes *Lizard*
-	*Lizard* poisons *Spock*
-	*Spock* smashes *Scissors*
-	*Scissors* decapitates *Lizard*
-	*Lizard* eats *Paper*
-	*Paper* disproves *Spock*
-	*Spock* vaporizes *Rock*
-	(and as it always has) *Rock* crushes *Scissors*
+	Scissors cuts Paper
+	Paper covers Rock
+	Rock crushes Lizard
+	Lizard poisons Spock
+	Spock smashes Scissors
+	Scissors decapitates Lizard
+	Lizard eats Paper
+	Paper disproves Spock
+	Spock vaporizes Rock
+	(and as it always has) Rock crushes Scissors
 
 -----------------------------------------------
 The game will open in a web browser.
