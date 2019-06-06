@@ -31,6 +31,7 @@ function win(user, computer) {
 	const smallUserWord = "User".fontsize(3).sup()
 	const smallCompWord = "Comp".fontsize(3).sup()
 	result_p.innerHTML = `${convertTwoWord(user)}${smallUserWord} beats ${convertTwoWord(computer)}${smallCompWord}. You Win!`;
+	
 }
 
 function lose(user, computer) {
