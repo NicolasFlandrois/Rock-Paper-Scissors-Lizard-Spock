@@ -4,46 +4,67 @@ const userScore_span = document.getElementById('user-score');
 const computerScore_span = document.getElementById('computer-score');
 const scoreBoard_div = document.querySelector(".score-board");
 const result_div = document.querySelector(".result");
-const rock_div = document.getElementById("rck");
-const paper_div = document.getElementById("ppr");
-const scissors_div = document.getElementById("ssr");
-const lizard_div = document.getElementById("lzr");
-const spock_div = document.getElementById("spk");
+const rock_div = document.getElementById("r");
+const paper_div = document.getElementById("p");
+const scissors_div = document.getElementById("s");
+const lizard_div = document.getElementById("l");
+const spock_div = document.getElementById("k");
 
 function getComputerChoice() {
-	const choices = ["rck", "ppr", "ssr", "lzr", "spk"];
+	const choices = ["r", "p", "s", "l", "k"];
 	const randomNumber = Math.floor(Math.random() * 5);
 	return randomNumber;
 }
 
-
 function game(userChoice) {
 	const computerChoice = getComputerChoice();
-	console.log("Computer Choice : " + computerChoice);
-	console.log("User choice : " + userChoice)
+	switch (userChoice + computerChoice) {
+		case "rl":
+		case "lk":
+		case "ks":
+		case "sp":
+		case "pr":
+		case "rs":
+		case "sl":
+		case "lp":
+		case "pk":
+		case "kr":
+			console.log("User Wins!");
+			break;
+		case "lr":
+		case "kl":
+		case "sk":
+		case "ps":
+		case "rp":
+		case "sr":
+		case "ls":
+		case "pl":
+		case "kp":
+		case "rk":
+			console.log("Computer Wins!")
+			break
+	}
 }
-
-game("rck")
 
 function main() {
 	rock_div.addEventListener('click', function() {
-		game("rck");
+		game("r");
 	})
 
 	paper_div.addEventListener('click', function() {
-		game("ppr");
+		game("p");
 	})
 
 	scissors_div.addEventListener('click', function() {
-		game("ssr");
+		game("s");
 	})
 
 	lizard_div.addEventListener('click', function() {
-		game("lzr");
+		game("l");
 	})
 
 	spock_div.addEventListener('click', function() {
-		game("spk");
+		game("k");
 	})
 }
 
