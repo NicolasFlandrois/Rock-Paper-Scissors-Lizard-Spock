@@ -10,27 +10,41 @@ const scissors_div = document.getElementById("ssr");
 const lizard_div = document.getElementById("lzr");
 const spock_div = document.getElementById("spk");
 
-rock_div.addEventListener('click', function() {
-	console.log("rock")
-//	game("rck");
-})
+function getComputerChoice() {
+	const choices = ["rck", "ppr", "ssr", "lzr", "spk"];
+	const randomNumber = Math.floor(Math.random() * 5);
+	return randomNumber;
+}
 
-paper_div.addEventListener('click', function() {
-	console.log("paper")
-//	game("ppr");
-})
 
-scissors_div.addEventListener('click', function() {
-	console.log("scissors")
-//	game("ssr");
-})
+function game(userChoice) {
+	const computerChoice = getComputerChoice();
+	console.log("Computer Choice : " + computerChoice);
+	console.log("User choice : " + userChoice)
+}
 
-lizard_div.addEventListener('click', function() {
-	console.log("lizard")
-//	game("lzr");
-})
+game("rck")
 
-spock_div.addEventListener('click', function() {
-	console.log("spock")
-//	game("spk");
-})
+function main() {
+	rock_div.addEventListener('click', function() {
+		game("rck");
+	})
+
+	paper_div.addEventListener('click', function() {
+		game("ppr");
+	})
+
+	scissors_div.addEventListener('click', function() {
+		game("ssr");
+	})
+
+	lizard_div.addEventListener('click', function() {
+		game("lzr");
+	})
+
+	spock_div.addEventListener('click', function() {
+		game("spk");
+	})
+}
+
+main()
