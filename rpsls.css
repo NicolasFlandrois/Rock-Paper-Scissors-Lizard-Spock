@@ -96,7 +96,18 @@ header > h1 {
 
 #rule-diagram {
 	margin: 15px 0;
-	text-align: center;	
+	display: flex;
+	justify-content: center;
+}
+
+#rules {
+	margin: 5px 5px;
+	padding: 20px 0;
+	color: white;
+	text-align: center;
+	font-family: Asap, sans-serif;
+	font-weight: bold;
+	font-size: 15px;
 }
 
 .green-glow {
