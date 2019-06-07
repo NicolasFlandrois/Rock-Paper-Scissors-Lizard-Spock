@@ -1,3 +1,5 @@
+//Author : Nicolas Flandrois
+//Date : Fri 07 Jun 2019 02:31:47 CEST 
 let userScore = 0;
 let computerScore = 0;
 const userScore_span = document.getElementById('user-score');
