@@ -1,6 +1,9 @@
 # Rock-Paper-Scissors-Lizard-Spock
+===============================================
+
 Author : Nicolas Flandrois
 Date: Fri 07 Jun 2019 02:30:05 CEST 
+
 ===============================================
 
 HTML, CSS, JS Exercice to play Rock-Paper-Scissors-Lizard-Spock variasion.
