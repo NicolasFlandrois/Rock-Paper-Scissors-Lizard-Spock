@@ -2,6 +2,7 @@
 ===============================================
 
 Author : Nicolas Flandrois
+
 Date: Fri 07 Jun 2019 02:30:05 CEST 
 
 ===============================================
@@ -27,7 +28,11 @@ Almost always, the boys will all pick Spock at the same time and tie over and ov
 -----------------------------------------------
 
 The game (HTML file) will be open in a web browser.
+
 The gamer will play against the machine.
+
 The machine will randomly choose one out of 5 choices.
+
 The gamer will choose a move by clicking on the icon.
+
 The game will provide which player is the winner, and display scores.
